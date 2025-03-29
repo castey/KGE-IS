@@ -30,7 +30,7 @@ e.g.
 save_drift_data.py calls generate_drift_data.py and saves the results to a json file named drift_data.json
 
 # grab_matrices.py
-This script is demonstration of the deterministic behavior of pykeen when using a fixed seed by calling pipeline() for the 237 dataset with num_epochs=0 then it grabs the matrix and saves to a file. It then does the same thing except with num_epochs set to default.
+This script is a demonstration of the deterministic behavior of pykeen when using a fixed seed by calling pipeline() for the 237 dataset with num_epochs=0 then it grabs the matrix and saves to a file. It then does the same thing except with num_epochs set to default.
 To set pykeen to deterministic simply set random.seed() and torch.manual_seed() to any number. This seeds all random number generation with a fixed seed ensuring deterministic output. 
 
 # compare_matrices.py
