@@ -1,0 +1,20 @@
+\textbf{Input sets} \\
+
+S_1 = \{ v^{(s_1)}_1, v^{(s_1)}_2,\dots,v^{(s_1)}_n \} \\
+S_2 = \{ v^{(s_2)}_1, v^{(s_2)}_2,\dots,v^{(s_2)}_n \} \\
+\\
+\textbf{Average Paired Distance Function:} \\
+\mu_E(S_1, S_2) = \frac{1}{n} \sum_{i=1}^{n} \left\| v^{(s_2)}_i - v^{(s_1)}_i \right\|_2 \\\\
+
+\textbf{Standard Deviation Function:} \\
+\sigma_E(S_1, S_2) = \sqrt{ \frac{1}{n - 1} \sum_{i=1}^{n} \left( \left\| v^{(s_2)}_i - v^{(s_1)}_i \right\|_2 - \mu_E(S_1, S_2) \right)^2 } \\\\
+
+\text{A = set of vector embeddings in dataset fb15k-237}^* \\
+\text{B = set of vector embeddings in dataset fb15k-238}^* \\
+\text{C = set of vector embeddings in dataset fb15k-239}^* \\
+
+\tiny ^*\text{minus the triples not present in } (237 \cap 238 \cap 239) \\\\
+
+\Delta_1:= \left( \mu_E(A, B),\ \sigma_E(A, B) \right) \\
+\Delta_2:= \left( \mu_E(A, C),\ \sigma_E(A, C) \right) \\
+\Delta_3:= \left( \mu_E(B, C),\ \sigma_E(B, C) \right)
