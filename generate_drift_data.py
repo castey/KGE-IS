@@ -122,9 +122,10 @@ def get_embedding_drift_data(aligned_triples, result_array):
             r_id = label_to_id_rel[rel_str]
             t_id = label_to_id_ent[tail_str]
 
-            h_emb = entity_emb(torch.tensor(h_id)).detach().numpy()
-            r_emb = relation_emb(torch.tensor(r_id)).detach().numpy()
-            t_emb = entity_emb(torch.tensor(t_id)).detach().numpy()
+            h_emb = entity_emb(torch.tensor(h_id).to(result.device)).detach().cpu().numpy()
+            r_emb = relation_emb(torch.tensor(r_id).to(result.device)).detach().cpu().numpy()
+            t_emb = entity_emb(torch.tensor(t_id).to(result.device)).detach().cpu().numpy()
+
 
             # Store in structured dictionary
             if triple_str not in drift_data:
