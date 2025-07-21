@@ -1,7 +1,0 @@
-KGenv/
-matrices_initial/
-matrices_trained/
-papers/
-__pycache__/
-drift_data.json
-.DS_Store
